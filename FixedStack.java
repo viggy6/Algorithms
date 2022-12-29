@@ -15,8 +15,7 @@ public class FixedStack<T>{
 
     public T pop(){
         T val =this.arr[N-1];
-        this.arr[N-1]=null;
-        N--;
+        this.arr[--N]=null;
         return val;
     }
 
@@ -26,5 +25,17 @@ public class FixedStack<T>{
             output+=item+", ";
         }
         return output+" ]";
+    }
+
+    public Boolean isEmpty(){
+        return this.N==0;
+    }
+
+    public Integer size(){
+        return this.N;
+    }
+
+    public Boolean isFull(){
+        return this.N==this.arr.length;
     }
 }
