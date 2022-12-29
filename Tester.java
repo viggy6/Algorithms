@@ -3,9 +3,13 @@ import java.util.Arrays;
 public class Tester {
 
     public static void main(String[] args) {
-        Integer[] data=new Integer[] {0,9,8,7,6,5,4,3,2,1};
-        BubleSort.sort(data);
-        System.out.println(LinearSearch.search(5, data));
+       FixedStack<Integer> fs= new FixedStack<Integer>(10);
+       fs.push(5);
+       fs.push(24);
+       fs.push(5);
+       System.out.println(fs.pop());
+       fs.push(36);
+       System.out.println(fs);
     }
     
 }
