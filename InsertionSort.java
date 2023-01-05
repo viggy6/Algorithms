@@ -1,12 +1,11 @@
 public class InsertionSort{
 
 
-    public static void sort(Object[] arr){
+    public static void sort(Comparable[] arr){
             for(int i=1;i<arr.length;i++){
-                Object current=arr[i];
-                Comparable val=(Comparable) current;
+                Comparable current=arr[i];
                 int previous=i-1;
-                while(previous>=0 && val.compareTo(arr[previous])<0){
+                while(previous>=0 && current.compareTo(arr[previous])<0){
                         arr[previous+1]=arr[previous];
                         previous=previous-1;
                 }
